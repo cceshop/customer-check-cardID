@@ -62,6 +62,7 @@ func RCChecker(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			panic(err)
 		}
+        }
 }
 
 func main() {
