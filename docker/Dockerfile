@@ -3,7 +3,7 @@ FROM golang:1.12.4-alpine3.9
 LABEL cce.image.vendor="Crypto Currency Exchange s.r.o."
 LABEL cce.image.maintainer="Crypto Currency Exchange s.r.o."
 LABEL cce.git.repository="https://github.com/cceshop/customer-check-cardID.git"
-LABEL cce.quay.repository="https://quay.io/repository/cceshop/customer-check-cardID"
+LABEL cce.quay.repository="https://quay.io/repository/cceshop/customer-check-cardid"
 
 USER root
 RUN mkdir -p /app
