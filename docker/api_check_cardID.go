@@ -67,6 +67,6 @@ func RCChecker(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	router := mux.NewRouter()
-	router.HandleFunc("/validate/rc/{id}", RCChecker)
+	router.HandleFunc("/validate/cardid/{id}", RCChecker)
 	log.Fatal(http.ListenAndServe(":80", router))
 }
