@@ -12,7 +12,6 @@ import (
 type InvalidRC struct {
 	Result struct {
 		Valid    bool   `json:"valid"`
-		Rc       string `json:"rc"`
 	} `json:"result"`
 }
 
@@ -54,10 +53,15 @@ func RCChecker(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 
 	if isValidRC(string(vars["id"])) {
-		w.Write([]byte("OK"))
+                _, err := w.Write([]byte("OK"))
+		if err != nil {
+			panic(err)
+		}
 	} else {
-		w.Write([]byte("NOK"))
-	}
+		_, err := w.Write([]byte("NOK"))
+		if err != nil {
+			panic(err)
+		}
 }
 
 func main() {
