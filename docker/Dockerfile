@@ -9,7 +9,7 @@ USER root
 RUN mkdir -p /app
 WORKDIR /app
 COPY ./entrypoint.sh /app
-COPY ./get_rates.go /app
+COPY ./api_check_cardID.go /app
 RUN chmod +x /app/entrypoint.sh \ 
     && apk add git \
     && go get github.com/gorilla/mux
