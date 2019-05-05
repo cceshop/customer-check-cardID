@@ -2,4 +2,4 @@
 #
 
 set -e
-go run /app/api_check_cardID.go
+go run /app/api.go
