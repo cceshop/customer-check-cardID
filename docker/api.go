@@ -80,6 +80,6 @@ func IDCardChecker(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	router := mux.NewRouter()
-	router.HandleFunc("/validate/idcard/{id}", IDCardChecker)
+	router.HandleFunc("/validate/{id}", IDCardChecker)
 	log.Fatal(http.ListenAndServe(":80", router))
 }
